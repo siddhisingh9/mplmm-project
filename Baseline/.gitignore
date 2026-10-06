@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments and local configuration
+.venv/
+venv/
+env/
+.env
+.env.*
+
+# Large datasets and downloaded archives
+MPLMM/dataset/
+*.pkl
+*.h5
+*.zip
+*.tar
+*.tar.gz
+
+# Local model checkpoints and experiment outputs
+*.pt
+*.pth
+MPLMM/pretrained/
+MPLMM/results/
+!MPLMM/results/
+!MPLMM/results/*.png
+!MPLMM/results/*.pdf
+
+# Notebook and tool-generated local state
+.ipynb_checkpoints/
+.vscode/
+.DS_Store
+
+# Preserve the project source tree when the original nested repository metadata
+# is kept as a local backup.
+MPLMM/.git.upstream-backup/
