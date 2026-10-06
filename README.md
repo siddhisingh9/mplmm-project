@@ -441,6 +441,6 @@ The current implementation has these limitations. Several are the subject of the
 
 ## License
 
-This project is released under the [MIT License](LICENSE). © 2026 Siddhi Singh.
+This project is released under the [MIT License](LICENSE). © 2026 Siddhi Singh, Vidit Shrimali, Lanka Devi Satwika.
 
 The CMU-MOSI, CMU-MOSEI, IEMOCAP and CH-SIMS datasets, and the pretrained models used here (BERT, ResNet-18, Whisper), are subject to their own licenses and terms of use.
