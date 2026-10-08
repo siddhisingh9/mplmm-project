@@ -1,0 +1,14 @@
+{
+  "variant": "unaligned",
+  "accuracy": 0.6805251641137856,
+  "precision_weighted": 0.6807791158584012,
+  "recall_weighted": 0.6805251641137856,
+  "f1_weighted": 0.6806391082908416,
+  "n_complete": 2281,
+  "n_test": 457,
+  "label_mapping": {
+    "negative": 0,
+    "positive": 1,
+    "rule": "numeric score >= 0"
+  }
+}

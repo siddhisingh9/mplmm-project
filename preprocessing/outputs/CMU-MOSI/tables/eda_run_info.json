@@ -1,0 +1,8 @@
+{
+  "dataset":"CMU-MOSI",
+  "processed_folder":"\/content\/drive\/MyDrive\/CMU-MOSI\/Processed",
+  "aligned_file":"\/content\/drive\/MyDrive\/CMU-MOSI\/Processed\/aligned_50.pkl",
+  "unaligned_file":"\/content\/drive\/MyDrive\/CMU-MOSI\/Processed\/unaligned_50.pkl",
+  "figures_folder":"\/content\/drive\/MyDrive\/mplmm_final_deliverables\/outputs\/CMU-MOSI\/figures",
+  "tables_folder":"\/content\/drive\/MyDrive\/mplmm_final_deliverables\/outputs\/CMU-MOSI\/tables"
+}

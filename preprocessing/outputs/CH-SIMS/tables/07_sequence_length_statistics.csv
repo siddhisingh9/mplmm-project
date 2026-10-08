@@ -1,0 +1,10 @@
+split,modality,count,mean,median,min,max
+test,Audio,457,400.0,400.0,400,400
+test,Text,457,39.0,39.0,39,39
+test,Vision,457,55.0,55.0,55,55
+train,Audio,1368,400.0,400.0,400,400
+train,Text,1368,39.0,39.0,39,39
+train,Vision,1368,55.0,55.0,55,55
+valid,Audio,456,400.0,400.0,400,400
+valid,Text,456,39.0,39.0,39,39
+valid,Vision,456,55.0,55.0,55,55

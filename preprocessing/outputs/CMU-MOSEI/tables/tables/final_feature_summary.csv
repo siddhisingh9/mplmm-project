@@ -1,0 +1,2 @@
+dataset,samples,complete_3_modalities,text_dim,audio_dim,visual_dim,pickle
+CMU-MOSEI,3225,0,768,74,35,/content/drive/MyDrive/mplmm_final_deliverables/outputs/CMU-MOSEI/artifacts/cmu_mosei_raw_features.pkl

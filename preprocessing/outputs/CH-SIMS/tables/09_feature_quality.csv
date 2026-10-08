@@ -1,0 +1,10 @@
+split,modality,shape,dtype,nan_count,inf_count,zero_elements
+train,Text,"(1368, 39, 768)",float32,0,0,0
+train,Audio,"(1368, 400, 33)",float64,0,0,10891275
+train,Vision,"(1368, 55, 709)",float64,0,0,32554472
+valid,Text,"(456, 39, 768)",float32,0,0,0
+valid,Audio,"(456, 400, 33)",float64,0,0,3691234
+valid,Vision,"(456, 55, 709)",float64,0,0,11088918
+test,Text,"(457, 39, 768)",float32,0,0,0
+test,Audio,"(457, 400, 33)",float64,0,0,3661767
+test,Vision,"(457, 55, 709)",float64,0,0,10943809

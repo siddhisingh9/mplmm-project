@@ -1,0 +1,12 @@
+{
+  "dataset": "CH-SIMS",
+  "representation": "unaligned processed",
+  "processed_pickle": "/content/drive/MyDrive/CH-SIMS/Processed/unaligned_39.pkl",
+  "train_samples": 1368,
+  "valid_samples": 456,
+  "test_samples": 457,
+  "true_T_label_available": false,
+  "true_A_label_available": false,
+  "true_V_label_available": false,
+  "output_folder": "/content/drive/MyDrive/mplmm_final_deliverables/outputs/CH-SIMS"
+}

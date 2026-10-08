@@ -1,0 +1,4 @@
+Split,Samples,Text key,Text shape,Audio key,Audio shape,Vision key,Vision shape,Target key,Target shape,T-label,A-label,V-label,Feature dtype
+TRAIN,1368,text,"(1368, 39, 768)",audio,"(1368, 400, 33)",vision,"(1368, 55, 709)",regression_labels,"(1368,)",Not present,Not present,Not present,float32
+VALID,456,text,"(456, 39, 768)",audio,"(456, 400, 33)",vision,"(456, 55, 709)",regression_labels,"(456,)",Not present,Not present,Not present,float32
+TEST,457,text,"(457, 39, 768)",audio,"(457, 400, 33)",vision,"(457, 55, 709)",regression_labels,"(457,)",Not present,Not present,Not present,float32

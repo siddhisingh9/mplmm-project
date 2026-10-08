@@ -1,0 +1,7 @@
+variant,modality,mean,median,min,max,std
+Aligned,audio,50.0,50.0,50,50,0.0
+Aligned,text,50.0,50.0,50,50,0.0
+Aligned,vision,50.0,50.0,50,50,0.0
+Unaligned,audio,375.0,375.0,375,375,0.0
+Unaligned,text,50.0,50.0,50,50,0.0
+Unaligned,vision,500.0,500.0,500,500,0.0

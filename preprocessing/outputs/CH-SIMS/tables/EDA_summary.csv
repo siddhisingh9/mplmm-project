@@ -1,0 +1,10 @@
+Metric,Value
+Total samples,2281
+Samples with text,2281
+Samples with audio,0
+Samples with video,0
+Complete 3-modality samples,0
+Incomplete samples,2281
+Train samples,1368
+Validation samples,456
+Test samples,457

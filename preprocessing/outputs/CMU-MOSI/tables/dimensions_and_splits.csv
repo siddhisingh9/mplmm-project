@@ -1,0 +1,7 @@
+variant,split,text_shape,text_samples,text_seq_len,text_dim,audio_shape,audio_samples,audio_seq_len,audio_dim,vision_shape,vision_samples,vision_seq_len,vision_dim,label_key,label_samples
+Aligned,train,"(1284, 50, 768)",1284,50,768,"(1284, 50, 5)",1284,50,5,"(1284, 50, 20)",1284,50,20,regression_labels,1284
+Aligned,valid,"(229, 50, 768)",229,50,768,"(229, 50, 5)",229,50,5,"(229, 50, 20)",229,50,20,regression_labels,229
+Aligned,test,"(686, 50, 768)",686,50,768,"(686, 50, 5)",686,50,5,"(686, 50, 20)",686,50,20,regression_labels,686
+Unaligned,train,"(1284, 50, 768)",1284,50,768,"(1284, 375, 5)",1284,375,5,"(1284, 500, 20)",1284,500,20,regression_labels,1284
+Unaligned,valid,"(229, 50, 768)",229,50,768,"(229, 375, 5)",229,375,5,"(229, 500, 20)",229,500,20,regression_labels,229
+Unaligned,test,"(686, 50, 768)",686,50,768,"(686, 375, 5)",686,375,5,"(686, 500, 20)",686,500,20,regression_labels,686

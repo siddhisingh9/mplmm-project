@@ -1,0 +1,8 @@
+{
+  "failures": {
+    "text": 0,
+    "audio": 0,
+    "visual": 0
+  },
+  "pickle": "/content/drive/MyDrive/mplmm_final_deliverables/outputs/CMU-MOSI/artifacts/cmu_mosi_raw_features.pkl"
+}

@@ -1,0 +1,4 @@
+variant,modality,nan_count,inf_count,zero_vectors
+unaligned,text,0,0,0
+unaligned,audio,0,0,0
+unaligned,visual,0,0,0
