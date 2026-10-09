@@ -6,6 +6,27 @@ We extend **MPLMM** (*Multimodal Prompt Learning with Missing Modalities*, Guo e
 
 ---
 
+## Problem Statement
+
+**Why it matters.** People express sentiment and emotion through *what* they say (text), *how* they say it (audio) and *how they look* (video). Multimodal models combine all three, but real inputs are often incomplete: the microphone fails, the face is hidden, or there is no transcript. Most models are trained on complete data, so their accuracy drops sharply when a modality is missing at test time.
+
+**The problem.** An utterance has three modalities, $x = \{x_T, x_A, x_V\}$, and any one or two of them may be missing. Given only the available modalities $x_{\text{avail}}$, we want to:
+
+1. **Reconstruct** each missing modality, $\hat{x}_m = G(x_{\text{avail}})$.
+2. **Predict** sentiment or emotion from the available and reconstructed modalities.
+
+The model must stay accurate across all missing-modality patterns and missing rates.
+
+**Where MPLMM falls short.** MPLMM ([Guo et al., 2024](#references)) reconstructs missing modalities with learnable prompts, but:
+
+- Its visual features are flat vectors, so the spatial structure of the face is lost.
+- Each sample is reconstructed alone, without using similar complete examples from the training data.
+- A single generator must handle every missing-modality pattern.
+
+**Our vision.** We build a missing-modality generator that keeps facial detail (**2D spatial features**), learns from similar complete training examples (**retrieval augmentation**) and uses specialised experts for different missing patterns (**MoE-MMGM**). The goal is robust sentiment analysis and emotion recognition that degrades gracefully as modalities go missing, tested on four benchmarks in English and Chinese.
+
+---
+
 ## Datasets
 
 | Dataset | Language | Task |
