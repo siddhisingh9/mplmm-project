@@ -3,12 +3,6 @@
 Reproduction workspace for the MPLMM multimodal learning experiments, including
 training code, diagnostics, and notebook-based Figure 4 and Figure 6 analysis.
 
-The implementation is based on the official
-[MPLMM](https://github.com/zrguo/MPLMM) code for:
-
-> Multimodal Prompt Learning with Missing Modalities for Sentiment Analysis and
-> Emotion Recognition
-
 ## Repository contents
 
 - [`MPLMM/`](MPLMM/) - model, dataset-loader, training, and evaluation code
@@ -50,7 +44,7 @@ MPLMM/dataset/sims_data.pkl
 MPLMM/dataset/iemocap/IEMOCAP_features_2021/
 ```
 
-## Training
+## Pre Training
 
 From the `MPLMM` directory, use the same Python interpreter as the notebook:
 
@@ -66,18 +60,83 @@ python main.py \
 For transfer learning, provide the pretrained MOSEI checkpoint with
 `--pretrained_model pretrained/mosei.pt`.
 
+## Fine Tuning
+
+Fine-tune each dataset from the same `MPLMM/` directory using a uniform command
+layout:
+
+### CMU-MOSEI
+
+```bash
+python main.py \
+  --pretrained_model pretrained/mosei.pt \
+  --dataset mosei \
+  --data_path dataset/mosei_senti_data.pkl \
+  --drop_rate 0.7 \
+  --num_epochs 30 \
+  --name results/mosei_stage2.pt
+```
+
+### CMU-MOSI
+
+```bash
+python main.py \
+  --pretrained_model pretrained/mosei.pt \
+  --dataset mosi \
+  --data_path dataset/mosi_data.pkl \
+  --drop_rate 0.7 \
+  --num_epochs 30 \
+  --name results/mosi_stage2.pt
+```
+
+### IEMOCAP
+
+```bash
+python main.py \
+  --pretrained_model pretrained/mosei.pt \
+  --dataset iemocap \
+  --data_path dataset/iemocap/IEMOCAP_features_2021 \
+  --drop_rate 0.7 \
+  --num_epochs 30 \
+  --name results/iemocap_stage2.pt
+```
+
+### CH-SIMS
+
+```bash
+python main.py \
+  --pretrained_model pretrained/mosei.pt \
+  --dataset sims \
+  --data_path dataset/sims_data.pkl \
+  --drop_rate 0.7 \
+  --num_epochs 30 \
+  --name results/sims_stage2.pt
+```
+
+### Fine-tuning flags 
+
+For the improved downstream runs we report for CMU-MOSI and IEMOCAP, we kept
+the same model and transfer setup but additionally used:
+
+```bash
+--shuffle_train --selection_metric avg_f1
+```
+
+- `--shuffle_train` shuffles training batches each epoch.
+- `--selection_metric avg_f1` saves the checkpoint with the best average
+  validation F1 across the six fixed missing-modality cases instead of using
+  validation loss alone.
+
 ## Figures
 
 The notebook contains the deterministic evaluation and plotting cells for the
 missing-modality experiments. Generated Figure 4 files are saved as:
 
 ```text
-MPLMM/results/figure4_mplmm.png
-MPLMM/results/figure4_mplmm.pdf
+MPLMM/results/CMU MOSI Performance During Training.png
+MPLMM/results/MPLMM Performance Under Different Test-Time Missing Rates.png
+MPLMM/results/table.png
 ```
-
-Generated Figure 6 files are saved under `MPLMM/results/` when the corresponding
-training runs complete.
 
 ## Citation
 
