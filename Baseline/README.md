@@ -50,15 +50,16 @@ From the `MPLMM` directory, use the same Python interpreter as the notebook:
 
 ```bash
 python main.py \
-  --dataset mosi \
-  --data_path dataset/mosi_data.pkl \
-  --drop_rate 0.7 \
-  --name results/mosi_stage2.pt \
-  --num_epochs 30
+  --dataset mosei \
+  --data_path dataset/mosei_senti_data.pkl \
+  --drop_rate 0.0 \
+  --num_epochs 30 \
+  --name pretrained/mosei.pt
 ```
 
-For transfer learning, provide the pretrained MOSEI checkpoint with
+For downstream transfer, provide the pretrained MOSEI checkpoint with
 `--pretrained_model pretrained/mosei.pt`.
+
 
 ## Fine Tuning
 
