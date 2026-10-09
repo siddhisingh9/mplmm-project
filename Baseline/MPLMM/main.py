@@ -65,6 +65,18 @@ parser.add_argument(
     "--attn_mask", action="store_false", help="use attention mask for Transformer"
 )
 parser.add_argument("--prompt_dim", type=int, default=30)
+parser.add_argument(
+    "--iemo_audio_len",
+    type=int,
+    default=350,
+    help="IEMOCAP audio frames to pad/truncate to (original: 350)",
+)
+parser.add_argument(
+    "--sims_norm",
+    type=int,
+    default=1,
+    help="z-score SIMS audio/vision with train-split stats (1) or use raw features (0)",
+)
 parser.add_argument("--prompt_length", type=int, default=16)
 
 
@@ -100,6 +112,21 @@ parser.add_argument(
 parser.add_argument("--seed", type=int, default=666, help="random seed")
 parser.add_argument("--no_cuda", action="store_true", help="do not use cuda")
 parser.add_argument("--name", type=str, default=None, help="name of the trial")
+parser.add_argument(
+    "--shuffle_train",
+    action="store_true",
+    help="shuffle training batches",
+)
+parser.add_argument(
+    "--selection_metric",
+    type=str,
+    default="loss",
+    choices=["loss", "avg_acc", "avg_f1"],
+    help=(
+        "checkpoint selection metric: validation loss or average validation "
+        "accuracy/F1 across the six fixed missing-modality cases"
+    ),
+)
 args = parser.parse_args()
 
 

@@ -72,10 +72,8 @@ The notebook contains the deterministic evaluation and plotting cells for the
 missing-modality experiments. Generated Figure 4 files are saved as:
 
 ```text
-MPLMM/results/CMU-MOSI Performance During Training.png
-MPLMM/results/MPLMM Performance Under Different Test-Time Missing Rates.png
-MPLMM/results/table.png
-
+MPLMM/results/figure4_mplmm.png
+MPLMM/results/figure4_mplmm.pdf
 ```
 
 Generated Figure 6 files are saved under `MPLMM/results/` when the corresponding

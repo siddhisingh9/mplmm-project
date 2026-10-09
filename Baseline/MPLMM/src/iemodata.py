@@ -173,7 +173,7 @@ def __print_size_warning(ow, oh, w, h):
 
 
 class IEMOData(BaseDataset):
-    def __init__(self, opt, data_path, set_name, drop_rate, full_data=False):
+    def __init__(self, opt, data_path, set_name, drop_rate, full_data=False, audio_len=350):
         """IEMOCAP dataset reader
         set_name in ['trn', 'val', 'tst']
         """
@@ -184,6 +184,9 @@ class IEMOData(BaseDataset):
         self.set_name = set_name
         self.drop_rate = drop_rate
         self.full_data = full_data
+        # Audio is zero-padded (or truncated) to this many frames. Utterances average
+        # ~45 frames, so the original 350 is ~87% padding.
+        self.audio_len = audio_len
         config = {
             "target_root": os.path.join(data_path, "target"),
             "feature_root": data_path,
@@ -285,7 +288,7 @@ class IEMOData(BaseDataset):
         return (1024, 130, 342)
 
     def get_seq_len(self):
-        return (22, 350, 50)
+        return (22, self.audio_len, 50)
 
     def get_missing_mode(self):
         if self.full_data:
@@ -305,13 +308,13 @@ class IEMOData(BaseDataset):
         return mean, std
 
     def collate_fn(self, batch):
-        max_length = 350
+        max_length = self.audio_len
         A = [
             torch.cat(
                 [
-                    sample[0][1],
+                    sample[0][1][:max_length],
                     torch.zeros(
-                        (max_length - len(sample[0][1]), sample[0][1].shape[1]),
+                        (max(max_length - len(sample[0][1]), 0), sample[0][1].shape[1]),
                         device="cpu",
                     ),
                 ]

@@ -39,7 +39,7 @@ def eval_mosei_senti(results, truths, exclude_zero=False):
     corr = np.corrcoef(test_preds, test_truth)[0][1]
     mult_a7 = multiclass_acc(test_preds_a7, test_truth_a7)
     mult_a5 = multiclass_acc(test_preds_a5, test_truth_a5)
-    f_score = f1_score((test_preds[non_zeros] > 0), (test_truth[non_zeros] > 0), average='weighted')
+    f_score = f1_score((test_truth[non_zeros] > 0), (test_preds[non_zeros] > 0), average='weighted')
     binary_truth = (test_truth[non_zeros] > 0)
     binary_preds = (test_preds[non_zeros] > 0)
 
@@ -79,7 +79,7 @@ def eval_sims(results, truths, exclude_zero=False):
     mae = np.mean(np.absolute(test_preds - test_truth))  # Average L1 distance between preds and truths
     corr = np.corrcoef(test_preds, test_truth)[0][1]
     mult_a5 = multiclass_acc(test_preds_a5, test_truth_a5)
-    f_score = f1_score((test_preds[non_zeros] > 0), (test_truth[non_zeros] > 0), average='weighted')
+    f_score = f1_score((test_truth[non_zeros] > 0), (test_preds[non_zeros] > 0), average='weighted')
     binary_truth = (test_truth[non_zeros] > 0)
     binary_preds = (test_preds[non_zeros] > 0)
     acc2 = accuracy_score(binary_truth, binary_preds)

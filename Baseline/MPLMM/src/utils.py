@@ -24,6 +24,7 @@ def get_data(args, split="train", full_data=False):
                 set_name="trn",
                 drop_rate=args.drop_rate,
                 full_data=full_data,
+                audio_len=getattr(args, "iemo_audio_len", 350),
             )
         elif split == "valid":
             data = IEMOData(
@@ -32,6 +33,7 @@ def get_data(args, split="train", full_data=False):
                 set_name="val",
                 drop_rate=args.drop_rate,
                 full_data=full_data,
+                audio_len=getattr(args, "iemo_audio_len", 350),
             )
         elif split == "test":
             data = IEMOData(
@@ -40,6 +42,7 @@ def get_data(args, split="train", full_data=False):
                 set_name="tst",
                 drop_rate=args.drop_rate,
                 full_data=full_data,
+                audio_len=getattr(args, "iemo_audio_len", 350),
             )
     elif args.dataset == "mosi" or args.dataset == "mosei":
         data = MOSIData(
@@ -47,7 +50,11 @@ def get_data(args, split="train", full_data=False):
         )
     elif args.dataset == "sims":
         data = SIMSData(
-            args.data_path, split, drop_rate=args.drop_rate, full_data=full_data
+            args.data_path,
+            split,
+            drop_rate=args.drop_rate,
+            full_data=full_data,
+            normalize=bool(getattr(args, "sims_norm", 1)),
         )
     return data
 
@@ -58,11 +65,21 @@ def get_loader(args):
     if args.dataset == "iemocap":
         for split in ["train", "valid", "test"]:
             dataset = get_data(args, split)
+            # IEMOCAP files are ordered by session/dialogue, so labels come in long
+            # runs; optionally shuffle the training split. The generator must live on
+            # the default device (main.py sets it to CUDA).
+            shuffle = split == "train" and bool(getattr(args, "shuffle_train", 0))
+            generator = None
+            if shuffle:
+                generator = torch.Generator(device=torch.get_default_device())
+                generator.manual_seed(args.seed)
             dataloaders[split] = DataLoader(
                 dataset,
                 batch_size=args.batch_size,
                 drop_last=False,
                 collate_fn=dataset.collate_fn,
+                shuffle=shuffle,
+                generator=generator,
             )
             orig_dims = dataset.get_dim()
             n_nums.append(len(dataset))
@@ -70,7 +87,15 @@ def get_loader(args):
     else:
         for split in ["train", "valid", "test"]:
             dataset = get_data(args, split)
-            dataloaders[split] = DataLoader(dataset, batch_size=args.batch_size)
+            # MOSI/MOSEI pickles are ordered by video, so optionally shuffle the train split.
+            shuffle = split == "train" and bool(getattr(args, "shuffle_train", 0))
+            generator = None
+            if shuffle:
+                generator = torch.Generator(device=torch.get_default_device())
+                generator.manual_seed(args.seed)
+            dataloaders[split] = DataLoader(
+                dataset, batch_size=args.batch_size, shuffle=shuffle, generator=generator
+            )
             orig_dims = dataset.get_dim()
             n_nums.append(len(dataset))
             seq_len = dataset.get_seq_len()
