@@ -3,6 +3,12 @@
 Reproduction workspace for the MPLMM multimodal learning experiments, including
 training code, diagnostics, and notebook-based Figure 4 and Figure 6 analysis.
 
+The implementation is based on the official
+[MPLMM](https://github.com/zrguo/MPLMM) code for:
+
+> Multimodal Prompt Learning with Missing Modalities for Sentiment Analysis and
+> Emotion Recognition
+
 ## Repository contents
 
 - [`MPLMM/`](MPLMM/) - model, dataset-loader, training, and evaluation code
@@ -44,9 +50,10 @@ MPLMM/dataset/sims_data.pkl
 MPLMM/dataset/iemocap/IEMOCAP_features_2021/
 ```
 
-## Pre Training
+## Training
 
-From the `MPLMM` directory, use the same Python interpreter as the notebook:
+From the `MPLMM` directory, use the same Python interpreter as the notebook.
+First, pre-train the MOSEI checkpoint used for downstream transfer:
 
 ```bash
 python main.py \
@@ -59,7 +66,6 @@ python main.py \
 
 For downstream transfer, provide the pretrained MOSEI checkpoint with
 `--pretrained_model pretrained/mosei.pt`.
-
 
 ## Fine Tuning
 
@@ -114,7 +120,7 @@ python main.py \
   --name results/sims_stage2.pt
 ```
 
-### Fine-tuning flags 
+### Optional fine-tuning flags used in this workspace
 
 For the improved downstream runs we report for CMU-MOSI and IEMOCAP, we kept
 the same model and transfer setup but additionally used:
@@ -128,16 +134,21 @@ the same model and transfer setup but additionally used:
   validation F1 across the six fixed missing-modality cases instead of using
   validation loss alone.
 
+These flags were used for the paper-compatible MOSI and IEMOCAP tuning runs in
+this reproduction workspace.
+
 ## Figures
 
 The notebook contains the deterministic evaluation and plotting cells for the
 missing-modality experiments. Generated Figure 4 files are saved as:
 
 ```text
-MPLMM/results/CMU MOSI Performance During Training.png
-MPLMM/results/MPLMM Performance Under Different Test-Time Missing Rates.png
-MPLMM/results/table.png
+MPLMM/results/figure4_mplmm.png
+MPLMM/results/figure4_mplmm.pdf
 ```
+
+Generated Figure 6 files are saved under `MPLMM/results/` when the corresponding
+training runs complete.
 
 ## Citation
 
