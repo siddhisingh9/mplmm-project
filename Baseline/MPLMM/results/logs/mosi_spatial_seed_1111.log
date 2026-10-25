@@ -1,0 +1,171 @@
+C:\Users\siddhi\AppData\Local\Programs\Python\Python310\lib\site-packages\torch\utils\_device.py:116: UserWarning: The number of elements in the out tensor of shape [50] is 50 which does not match the computed number of elements 66. Note that this may occur as a result of rounding error. The out tensor will be resized to a tensor of shape (66,). (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\aten\src\ATen\native\cuda\RangeFactories.cu:261.)
+  return func(*args, **kwargs)
+Missing key(s) in state_dict :proj_l.weight
+Missing key(s) in state_dict :proj_a.weight
+Missing key(s) in state_dict :proj_v.weight
+Missing key(s) in state_dict :out_layer.weight
+Missing key(s) in state_dict :out_layer.bias
+Epoch  1 | Batch  10/ 21 | Time/Batch(ms) 501.10 | Train Loss 1.3379
+Epoch  1 | Batch  20/ 21 | Time/Batch(ms) 320.09 | Train Loss 1.2881
+--------------------------------------------------
+Epoch  1 | Time 10.7696 sec | Valid Loss 1.4160 | Test Loss 1.4627
+--------------------------------------------------
+Saved model at results/mosi_spatial_seed_1111.pt
+Epoch  2 | Batch  10/ 21 | Time/Batch(ms) 388.57 | Train Loss 1.2975
+Epoch  2 | Batch  20/ 21 | Time/Batch(ms) 307.42 | Train Loss 1.2944
+--------------------------------------------------
+Epoch  2 | Time 9.5628 sec | Valid Loss 1.4142 | Test Loss 1.4573
+--------------------------------------------------
+Saved model at results/mosi_spatial_seed_1111.pt
+Epoch  3 | Batch  10/ 21 | Time/Batch(ms) 392.32 | Train Loss 1.2677
+Epoch  3 | Batch  20/ 21 | Time/Batch(ms) 312.79 | Train Loss 1.2667
+--------------------------------------------------
+Epoch  3 | Time 9.7359 sec | Valid Loss 1.4552 | Test Loss 1.4404
+--------------------------------------------------
+Epoch  4 | Batch  10/ 21 | Time/Batch(ms) 384.43 | Train Loss 1.1858
+Epoch  4 | Batch  20/ 21 | Time/Batch(ms) 311.19 | Train Loss 1.2933
+--------------------------------------------------
+Epoch  4 | Time 9.7628 sec | Valid Loss 1.4514 | Test Loss 1.4430
+--------------------------------------------------
+Epoch  5 | Batch  10/ 21 | Time/Batch(ms) 378.34 | Train Loss 1.2083
+Epoch  5 | Batch  20/ 21 | Time/Batch(ms) 323.06 | Train Loss 1.1283
+--------------------------------------------------
+Epoch  5 | Time 10.1654 sec | Valid Loss 1.5793 | Test Loss 1.4195
+--------------------------------------------------
+Epoch  6 | Batch  10/ 21 | Time/Batch(ms) 409.17 | Train Loss 1.1763
+Epoch  6 | Batch  20/ 21 | Time/Batch(ms) 329.51 | Train Loss 1.1965
+--------------------------------------------------
+Epoch  6 | Time 10.6739 sec | Valid Loss 1.5333 | Test Loss 1.5464
+--------------------------------------------------
+Epoch  7 | Batch  10/ 21 | Time/Batch(ms) 365.44 | Train Loss 1.1371
+Epoch  7 | Batch  20/ 21 | Time/Batch(ms) 308.12 | Train Loss 1.1765
+--------------------------------------------------
+Epoch  7 | Time 9.5478 sec | Valid Loss 1.4926 | Test Loss 1.4300
+--------------------------------------------------
+Epoch  8 | Batch  10/ 21 | Time/Batch(ms) 373.34 | Train Loss 1.1921
+Epoch  8 | Batch  20/ 21 | Time/Batch(ms) 321.87 | Train Loss 1.1651
+--------------------------------------------------
+Epoch  8 | Time 9.7571 sec | Valid Loss 1.4038 | Test Loss 1.5724
+--------------------------------------------------
+Saved model at results/mosi_spatial_seed_1111.pt
+Epoch  9 | Batch  10/ 21 | Time/Batch(ms) 396.81 | Train Loss 1.1928
+Epoch  9 | Batch  20/ 21 | Time/Batch(ms) 304.27 | Train Loss 1.1775
+--------------------------------------------------
+Epoch  9 | Time 9.9199 sec | Valid Loss 1.6381 | Test Loss 1.4348
+--------------------------------------------------
+Epoch 10 | Batch  10/ 21 | Time/Batch(ms) 352.99 | Train Loss 1.2082
+Epoch 10 | Batch  20/ 21 | Time/Batch(ms) 324.42 | Train Loss 1.1863
+--------------------------------------------------
+Epoch 10 | Time 9.5786 sec | Valid Loss 1.4448 | Test Loss 1.4397
+--------------------------------------------------
+Epoch 11 | Batch  10/ 21 | Time/Batch(ms) 360.20 | Train Loss 1.1210
+Epoch 11 | Batch  20/ 21 | Time/Batch(ms) 302.60 | Train Loss 1.1132
+--------------------------------------------------
+Epoch 11 | Time 9.5085 sec | Valid Loss 1.4553 | Test Loss 1.4758
+--------------------------------------------------
+Epoch 12 | Batch  10/ 21 | Time/Batch(ms) 375.30 | Train Loss 1.0891
+Epoch 12 | Batch  20/ 21 | Time/Batch(ms) 317.80 | Train Loss 1.1301
+--------------------------------------------------
+Epoch 12 | Time 9.6325 sec | Valid Loss 1.3747 | Test Loss 1.4850
+--------------------------------------------------
+Saved model at results/mosi_spatial_seed_1111.pt
+Epoch 13 | Batch  10/ 21 | Time/Batch(ms) 390.01 | Train Loss 1.1247
+Epoch 13 | Batch  20/ 21 | Time/Batch(ms) 323.38 | Train Loss 1.0311
+--------------------------------------------------
+Epoch 13 | Time 9.9418 sec | Valid Loss 1.4295 | Test Loss 1.3803
+--------------------------------------------------
+Epoch 14 | Batch  10/ 21 | Time/Batch(ms) 375.22 | Train Loss 1.0558
+Epoch 14 | Batch  20/ 21 | Time/Batch(ms) 313.73 | Train Loss 1.0370
+--------------------------------------------------
+Epoch 14 | Time 9.6723 sec | Valid Loss 1.3353 | Test Loss 1.3893
+--------------------------------------------------
+Saved model at results/mosi_spatial_seed_1111.pt
+Epoch 15 | Batch  10/ 21 | Time/Batch(ms) 398.23 | Train Loss 1.0377
+Epoch 15 | Batch  20/ 21 | Time/Batch(ms) 316.77 | Train Loss 1.1262
+--------------------------------------------------
+Epoch 15 | Time 10.0599 sec | Valid Loss 1.3426 | Test Loss 1.4405
+--------------------------------------------------
+Epoch 16 | Batch  10/ 21 | Time/Batch(ms) 357.16 | Train Loss 1.0905
+Epoch 16 | Batch  20/ 21 | Time/Batch(ms) 309.42 | Train Loss 0.9805
+--------------------------------------------------
+Epoch 16 | Time 9.4100 sec | Valid Loss 1.3765 | Test Loss 1.3962
+--------------------------------------------------
+Epoch 17 | Batch  10/ 21 | Time/Batch(ms) 349.01 | Train Loss 1.0494
+Epoch 17 | Batch  20/ 21 | Time/Batch(ms) 317.06 | Train Loss 1.0031
+--------------------------------------------------
+Epoch 17 | Time 9.3795 sec | Valid Loss 1.3254 | Test Loss 1.3460
+--------------------------------------------------
+Saved model at results/mosi_spatial_seed_1111.pt
+Epoch 18 | Batch  10/ 21 | Time/Batch(ms) 376.76 | Train Loss 1.0159
+Epoch 18 | Batch  20/ 21 | Time/Batch(ms) 321.99 | Train Loss 1.0201
+--------------------------------------------------
+Epoch 18 | Time 9.8348 sec | Valid Loss 1.3409 | Test Loss 1.3039
+--------------------------------------------------
+Epoch 19 | Batch  10/ 21 | Time/Batch(ms) 363.87 | Train Loss 0.9644
+Epoch 19 | Batch  20/ 21 | Time/Batch(ms) 312.36 | Train Loss 0.9950
+--------------------------------------------------
+Epoch 19 | Time 9.5627 sec | Valid Loss 1.4698 | Test Loss 1.3361
+--------------------------------------------------
+Epoch 20 | Batch  10/ 21 | Time/Batch(ms) 346.72 | Train Loss 1.0206
+Epoch 20 | Batch  20/ 21 | Time/Batch(ms) 294.83 | Train Loss 0.9994
+--------------------------------------------------
+Epoch 20 | Time 9.1563 sec | Valid Loss 1.3458 | Test Loss 1.3240
+--------------------------------------------------
+Epoch 21 | Batch  10/ 21 | Time/Batch(ms) 347.97 | Train Loss 1.0595
+Epoch 21 | Batch  20/ 21 | Time/Batch(ms) 316.03 | Train Loss 1.0047
+--------------------------------------------------
+Epoch 21 | Time 9.3597 sec | Valid Loss 1.3228 | Test Loss 1.2531
+--------------------------------------------------
+Saved model at results/mosi_spatial_seed_1111.pt
+Epoch 22 | Batch  10/ 21 | Time/Batch(ms) 377.01 | Train Loss 1.0226
+Epoch 22 | Batch  20/ 21 | Time/Batch(ms) 313.02 | Train Loss 0.9485
+--------------------------------------------------
+Epoch 22 | Time 9.6968 sec | Valid Loss 1.3336 | Test Loss 1.3977
+--------------------------------------------------
+Epoch 23 | Batch  10/ 21 | Time/Batch(ms) 354.13 | Train Loss 0.9874
+Epoch 23 | Batch  20/ 21 | Time/Batch(ms) 305.01 | Train Loss 0.9763
+--------------------------------------------------
+Epoch 23 | Time 9.5146 sec | Valid Loss 1.3644 | Test Loss 1.3358
+--------------------------------------------------
+Epoch 24 | Batch  10/ 21 | Time/Batch(ms) 349.77 | Train Loss 0.9967
+Epoch 24 | Batch  20/ 21 | Time/Batch(ms) 310.39 | Train Loss 0.9937
+--------------------------------------------------
+Epoch 24 | Time 9.4881 sec | Valid Loss 1.2357 | Test Loss 1.4188
+--------------------------------------------------
+Saved model at results/mosi_spatial_seed_1111.pt
+Epoch 25 | Batch  10/ 21 | Time/Batch(ms) 375.11 | Train Loss 0.9661
+Epoch 25 | Batch  20/ 21 | Time/Batch(ms) 309.67 | Train Loss 0.9781
+--------------------------------------------------
+Epoch 25 | Time 9.6599 sec | Valid Loss 1.3337 | Test Loss 1.3466
+--------------------------------------------------
+Epoch 26 | Batch  10/ 21 | Time/Batch(ms) 363.13 | Train Loss 0.9466
+Epoch 26 | Batch  20/ 21 | Time/Batch(ms) 303.41 | Train Loss 1.0100
+--------------------------------------------------
+Epoch 26 | Time 9.4180 sec | Valid Loss 1.2625 | Test Loss 1.3168
+--------------------------------------------------
+Epoch 27 | Batch  10/ 21 | Time/Batch(ms) 363.02 | Train Loss 1.0083
+Epoch 27 | Batch  20/ 21 | Time/Batch(ms) 320.85 | Train Loss 1.0017
+--------------------------------------------------
+Epoch 27 | Time 9.5543 sec | Valid Loss 1.2734 | Test Loss 1.2894
+--------------------------------------------------
+Epoch 28 | Batch  10/ 21 | Time/Batch(ms) 354.75 | Train Loss 0.8904
+Epoch 28 | Batch  20/ 21 | Time/Batch(ms) 317.66 | Train Loss 0.9407
+--------------------------------------------------
+Epoch 28 | Time 9.3706 sec | Valid Loss 1.3472 | Test Loss 1.3255
+--------------------------------------------------
+Epoch 29 | Batch  10/ 21 | Time/Batch(ms) 352.92 | Train Loss 0.9922
+Epoch 29 | Batch  20/ 21 | Time/Batch(ms) 289.56 | Train Loss 0.9366
+--------------------------------------------------
+Epoch 29 | Time 9.1870 sec | Valid Loss 1.3046 | Test Loss 1.3122
+--------------------------------------------------
+Epoch 30 | Batch  10/ 21 | Time/Batch(ms) 365.92 | Train Loss 0.9402
+Epoch 30 | Batch  20/ 21 | Time/Batch(ms) 310.99 | Train Loss 0.9538
+--------------------------------------------------
+Epoch 30 | Time 9.4231 sec | Valid Loss 1.3847 | Test Loss 1.3148
+--------------------------------------------------
+MAE:  1.410868
+Correlation Coefficient:  0.2636175241789085
+mult_acc_7:  0.20262390670553937
+mult_acc_5:  0.2259475218658892
+F1 score:  0.6013077830744841
+Accuracy:  0.600609756097561

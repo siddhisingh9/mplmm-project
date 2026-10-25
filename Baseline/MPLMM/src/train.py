@@ -53,6 +53,7 @@ def train_model(settings, hyp_params, train_loader, valid_loader, test_loader):
             drop_rate=0.0,
             iemo_audio_len=getattr(hyp_params, "iemo_audio_len", 350),
             sims_norm=getattr(hyp_params, "sims_norm", 1),
+            spatial_feats=getattr(hyp_params, "spatial_feats", None),
         )
         dataset = get_data(args, split=split, full_data=True)
         loader_kwargs = {

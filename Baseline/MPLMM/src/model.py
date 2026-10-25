@@ -3,6 +3,7 @@ import torch.nn.functional as F
 from torch import nn
 
 from modules.transformer import TransformerEncoder
+from src.spatial import SpatialVisualEncoder
 
 
 class MULTModel(nn.Module):
@@ -173,6 +174,19 @@ class PromptModel(nn.Module):
         combined_dim = self.d_l + self.d_a + self.d_v
         combined_dim = 2 * (self.d_l + self.d_a + self.d_v)
         output_dim = hyp_params.output_dim
+
+        # 2D spatial visual encoder: frame feature maps -> (B, T, orig_d_v)
+        self.spatial_encoder = None
+        if getattr(hyp_params, "spatial_feats", None):
+            in_channels, height, width = hyp_params.spatial_in
+            self.spatial_encoder = SpatialVisualEncoder(
+                in_channels,
+                (height, width),
+                conv_channels=hyp_params.spatial_channels,
+                out_dim=self.orig_d_v,
+                pool=hyp_params.spatial_pool,
+                dropout=hyp_params.spatial_dropout,
+            )
 
         generative_prompt = torch.zeros(3, self.prompt_dim, self.prompt_length)
         self.generative_prompt = nn.Parameter(generative_prompt)
@@ -380,6 +394,9 @@ class PromptModel(nn.Module):
         )
 
     def forward(self, x_l, x_a, x_v, missing_mod):
+        # getattr keeps checkpoints saved before the spatial encoder existed loadable
+        if getattr(self, "spatial_encoder", None) is not None:
+            x_v = self.spatial_encoder(x_v)
         x_l = F.dropout(
             x_l.transpose(1, 2), p=self.embed_dropout, training=self.training
         )

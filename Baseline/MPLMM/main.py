@@ -1,3 +1,4 @@
+import os
 import random
 
 import numpy as np
@@ -127,7 +128,43 @@ parser.add_argument(
         "accuracy/F1 across the six fixed missing-modality cases"
     ),
 )
+
+# 2D spatial visual features (Technique A)
+parser.add_argument(
+    "--spatial_feats",
+    type=str,
+    default=None,
+    help=(
+        "directory with <split>.npy frame feature maps from "
+        "tools/extract_mosi_spatial.py; enables the 2D spatial visual encoder"
+    ),
+)
+parser.add_argument(
+    "--spatial_channels",
+    type=int,
+    default=32,
+    help="output channels of the 2D spatial convolution",
+)
+parser.add_argument(
+    "--spatial_dim",
+    type=int,
+    default=64,
+    help="visual feature size produced by the spatial encoder",
+)
+parser.add_argument(
+    "--spatial_dropout",
+    type=float,
+    default=0.1,
+    help="dropout on the flattened spatial features",
+)
+parser.add_argument(
+    "--spatial_pool",
+    action="store_true",
+    help="average the feature map to 1x1 before the convolution (no-spatial control)",
+)
 args = parser.parse_args()
+if args.spatial_feats and (args.dataset != "mosi" or args.pretrained_model is None):
+    parser.error("--spatial_feats is supported for --dataset mosi with --pretrained_model")
 
 
 dataset = str.lower(args.dataset.strip())
@@ -176,6 +213,11 @@ testloder = dataloaders["test"]
 ####################################################################
 hyp_params = args
 hyp_params.orig_d_l, hyp_params.orig_d_a, hyp_params.orig_d_v = orig_dims
+if args.spatial_feats:
+    # orig_dims[2] is the feature-map channel count; the encoder outputs spatial_dim.
+    map_shape = np.load(os.path.join(args.spatial_feats, "train.npy"), mmap_mode="r").shape
+    hyp_params.spatial_in = map_shape[2:]
+    hyp_params.orig_d_v = args.spatial_dim
 hyp_params.layers = args.nlevels
 hyp_params.use_cuda = use_cuda
 hyp_params.dataset = dataset

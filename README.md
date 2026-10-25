@@ -46,7 +46,7 @@ The model must stay accurate across all missing-modality patterns and missing ra
 |---|---|---|
 | 1 | Pre-processing and EDA: CMU-MOSI, CMU-MOSEI, CH-SIMS, IEMOCAP | ✅ Done |
 | 2 | MPLMM baseline reproduction (pre-training and fine-tuning) | ✅ Done |
-| 3 | Technique A: 2D spatial feature convolution | 🔲 Next |
+| 3 | Technique A: 2D spatial feature convolution | 🟡 Done on CMU-MOSI: 62.11 / 60.63 avg. ACC / F1 vs baseline 62.22 / 58.23 ([details](Baseline/README.md#technique-a-2d-spatial-feature-convolution-cmu-mosi)) |
 | 4 | Technique B: Retrieval-augmented reconstruction (RAG, with Residual RAG as an extension) | 🔲 Next |
 | 5 | Technique C: Mixture-of-Experts missing-modality generator (MoE-MMGM) | 🔲 Next |
 

@@ -1,0 +1,166 @@
+C:\Users\siddhi\AppData\Local\Programs\Python\Python310\lib\site-packages\torch\utils\_device.py:116: UserWarning: The number of elements in the out tensor of shape [50] is 50 which does not match the computed number of elements 66. Note that this may occur as a result of rounding error. The out tensor will be resized to a tensor of shape (66,). (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\aten\src\ATen\native\cuda\RangeFactories.cu:261.)
+  return func(*args, **kwargs)
+Missing key(s) in state_dict :proj_l.weight
+Missing key(s) in state_dict :proj_a.weight
+Missing key(s) in state_dict :proj_v.weight
+Missing key(s) in state_dict :out_layer.weight
+Missing key(s) in state_dict :out_layer.bias
+Epoch  1 | Batch  10/ 21 | Time/Batch(ms) 740.40 | Train Loss 1.3199
+Epoch  1 | Batch  20/ 21 | Time/Batch(ms) 557.20 | Train Loss 1.3210
+--------------------------------------------------
+Epoch  1 | Time 17.0148 sec | Valid Loss 1.4220 | Test Loss 1.4537
+--------------------------------------------------
+Saved model at results/sweep/mosi_hsehead_pool_seed_3333.pt
+Epoch  2 | Batch  10/ 21 | Time/Batch(ms) 456.31 | Train Loss 1.3360
+Epoch  2 | Batch  20/ 21 | Time/Batch(ms) 420.01 | Train Loss 1.2695
+--------------------------------------------------
+Epoch  2 | Time 14.1516 sec | Valid Loss 1.4140 | Test Loss 1.4530
+--------------------------------------------------
+Saved model at results/sweep/mosi_hsehead_pool_seed_3333.pt
+Epoch  3 | Batch  10/ 21 | Time/Batch(ms) 633.50 | Train Loss 1.2732
+Epoch  3 | Batch  20/ 21 | Time/Batch(ms) 572.89 | Train Loss 1.2933
+--------------------------------------------------
+Epoch  3 | Time 17.2497 sec | Valid Loss 1.4189 | Test Loss 1.3897
+--------------------------------------------------
+Epoch  4 | Batch  10/ 21 | Time/Batch(ms) 513.71 | Train Loss 1.2804
+Epoch  4 | Batch  20/ 21 | Time/Batch(ms) 394.48 | Train Loss 1.2702
+--------------------------------------------------
+Epoch  4 | Time 13.0832 sec | Valid Loss 1.3722 | Test Loss 1.4053
+--------------------------------------------------
+Saved model at results/sweep/mosi_hsehead_pool_seed_3333.pt
+Epoch  5 | Batch  10/ 21 | Time/Batch(ms) 499.32 | Train Loss 1.2603
+Epoch  5 | Batch  20/ 21 | Time/Batch(ms) 431.82 | Train Loss 1.2278
+--------------------------------------------------
+Epoch  5 | Time 13.3737 sec | Valid Loss 1.4286 | Test Loss 1.4110
+--------------------------------------------------
+Epoch  6 | Batch  10/ 21 | Time/Batch(ms) 649.04 | Train Loss 1.2295
+Epoch  6 | Batch  20/ 21 | Time/Batch(ms) 621.93 | Train Loss 1.2381
+--------------------------------------------------
+Epoch  6 | Time 18.1283 sec | Valid Loss 1.4794 | Test Loss 1.4374
+--------------------------------------------------
+Epoch  7 | Batch  10/ 21 | Time/Batch(ms) 633.16 | Train Loss 1.2104
+Epoch  7 | Batch  20/ 21 | Time/Batch(ms) 597.04 | Train Loss 1.2055
+--------------------------------------------------
+Epoch  7 | Time 17.6428 sec | Valid Loss 1.4333 | Test Loss 1.4407
+--------------------------------------------------
+Epoch  8 | Batch  10/ 21 | Time/Batch(ms) 642.38 | Train Loss 1.2062
+Epoch  8 | Batch  20/ 21 | Time/Batch(ms) 556.47 | Train Loss 1.1873
+--------------------------------------------------
+Epoch  8 | Time 17.6078 sec | Valid Loss 1.4727 | Test Loss 1.3913
+--------------------------------------------------
+Epoch  9 | Batch  10/ 21 | Time/Batch(ms) 647.57 | Train Loss 1.1750
+Epoch  9 | Batch  20/ 21 | Time/Batch(ms) 546.39 | Train Loss 1.1639
+--------------------------------------------------
+Epoch  9 | Time 17.4508 sec | Valid Loss 1.5469 | Test Loss 1.4097
+--------------------------------------------------
+Epoch 10 | Batch  10/ 21 | Time/Batch(ms) 650.90 | Train Loss 1.1744
+Epoch 10 | Batch  20/ 21 | Time/Batch(ms) 541.99 | Train Loss 1.2052
+--------------------------------------------------
+Epoch 10 | Time 17.4768 sec | Valid Loss 1.5390 | Test Loss 1.4235
+--------------------------------------------------
+Epoch 11 | Batch  10/ 21 | Time/Batch(ms) 650.90 | Train Loss 1.1747
+Epoch 11 | Batch  20/ 21 | Time/Batch(ms) 566.61 | Train Loss 1.1029
+--------------------------------------------------
+Epoch 11 | Time 17.8787 sec | Valid Loss 1.4831 | Test Loss 1.4111
+--------------------------------------------------
+Epoch 12 | Batch  10/ 21 | Time/Batch(ms) 651.27 | Train Loss 1.1062
+Epoch 12 | Batch  20/ 21 | Time/Batch(ms) 532.42 | Train Loss 1.2015
+--------------------------------------------------
+Epoch 12 | Time 17.2425 sec | Valid Loss 1.4374 | Test Loss 1.4748
+--------------------------------------------------
+Epoch 13 | Batch  10/ 21 | Time/Batch(ms) 656.90 | Train Loss 1.1379
+Epoch 13 | Batch  20/ 21 | Time/Batch(ms) 561.58 | Train Loss 1.1452
+--------------------------------------------------
+Epoch 13 | Time 17.7555 sec | Valid Loss 1.4799 | Test Loss 1.4282
+--------------------------------------------------
+Epoch 14 | Batch  10/ 21 | Time/Batch(ms) 667.75 | Train Loss 1.1250
+Epoch 14 | Batch  20/ 21 | Time/Batch(ms) 568.49 | Train Loss 1.1498
+--------------------------------------------------
+Epoch 14 | Time 17.7698 sec | Valid Loss 1.4824 | Test Loss 1.3907
+--------------------------------------------------
+Epoch 15 | Batch  10/ 21 | Time/Batch(ms) 698.76 | Train Loss 1.1128
+Epoch 15 | Batch  20/ 21 | Time/Batch(ms) 571.72 | Train Loss 1.1269
+--------------------------------------------------
+Epoch 15 | Time 18.4795 sec | Valid Loss 1.4809 | Test Loss 1.4280
+--------------------------------------------------
+Epoch 16 | Batch  10/ 21 | Time/Batch(ms) 660.24 | Train Loss 1.1489
+Epoch 16 | Batch  20/ 21 | Time/Batch(ms) 552.44 | Train Loss 1.0568
+--------------------------------------------------
+Epoch 16 | Time 17.5319 sec | Valid Loss 1.5001 | Test Loss 1.4436
+--------------------------------------------------
+Epoch 17 | Batch  10/ 21 | Time/Batch(ms) 682.51 | Train Loss 1.0747
+Epoch 17 | Batch  20/ 21 | Time/Batch(ms) 575.27 | Train Loss 1.1608
+--------------------------------------------------
+Epoch 17 | Time 18.0374 sec | Valid Loss 1.4419 | Test Loss 1.3905
+--------------------------------------------------
+Epoch 18 | Batch  10/ 21 | Time/Batch(ms) 666.15 | Train Loss 1.0537
+Epoch 18 | Batch  20/ 21 | Time/Batch(ms) 580.82 | Train Loss 1.0978
+--------------------------------------------------
+Epoch 18 | Time 18.0934 sec | Valid Loss 1.4136 | Test Loss 1.3900
+--------------------------------------------------
+Epoch 19 | Batch  10/ 21 | Time/Batch(ms) 664.82 | Train Loss 1.1191
+Epoch 19 | Batch  20/ 21 | Time/Batch(ms) 554.06 | Train Loss 1.0687
+--------------------------------------------------
+Epoch 19 | Time 17.4491 sec | Valid Loss 1.5118 | Test Loss 1.3864
+--------------------------------------------------
+Epoch 20 | Batch  10/ 21 | Time/Batch(ms) 676.32 | Train Loss 1.0739
+Epoch 20 | Batch  20/ 21 | Time/Batch(ms) 608.45 | Train Loss 1.0556
+--------------------------------------------------
+Epoch 20 | Time 18.3320 sec | Valid Loss 1.4140 | Test Loss 1.4280
+--------------------------------------------------
+Epoch 21 | Batch  10/ 21 | Time/Batch(ms) 656.11 | Train Loss 1.1095
+Epoch 21 | Batch  20/ 21 | Time/Batch(ms) 552.02 | Train Loss 1.0458
+--------------------------------------------------
+Epoch 21 | Time 17.6146 sec | Valid Loss 1.4519 | Test Loss 1.4235
+--------------------------------------------------
+Epoch 22 | Batch  10/ 21 | Time/Batch(ms) 671.39 | Train Loss 1.0708
+Epoch 22 | Batch  20/ 21 | Time/Batch(ms) 557.11 | Train Loss 1.0641
+--------------------------------------------------
+Epoch 22 | Time 17.9671 sec | Valid Loss 1.5448 | Test Loss 1.3903
+--------------------------------------------------
+Epoch 23 | Batch  10/ 21 | Time/Batch(ms) 682.15 | Train Loss 1.0776
+Epoch 23 | Batch  20/ 21 | Time/Batch(ms) 562.29 | Train Loss 1.0859
+--------------------------------------------------
+Epoch 23 | Time 17.7867 sec | Valid Loss 1.5106 | Test Loss 1.4311
+--------------------------------------------------
+Epoch 24 | Batch  10/ 21 | Time/Batch(ms) 630.68 | Train Loss 1.0378
+Epoch 24 | Batch  20/ 21 | Time/Batch(ms) 544.02 | Train Loss 1.0606
+--------------------------------------------------
+Epoch 24 | Time 17.4191 sec | Valid Loss 1.4146 | Test Loss 1.4022
+--------------------------------------------------
+Epoch 25 | Batch  10/ 21 | Time/Batch(ms) 657.38 | Train Loss 1.1190
+Epoch 25 | Batch  20/ 21 | Time/Batch(ms) 635.14 | Train Loss 1.0528
+--------------------------------------------------
+Epoch 25 | Time 18.3484 sec | Valid Loss 1.4480 | Test Loss 1.4195
+--------------------------------------------------
+Epoch 26 | Batch  10/ 21 | Time/Batch(ms) 650.37 | Train Loss 1.0549
+Epoch 26 | Batch  20/ 21 | Time/Batch(ms) 560.44 | Train Loss 1.0537
+--------------------------------------------------
+Epoch 26 | Time 17.6487 sec | Valid Loss 1.4796 | Test Loss 1.4095
+--------------------------------------------------
+Epoch 27 | Batch  10/ 21 | Time/Batch(ms) 662.43 | Train Loss 1.0863
+Epoch 27 | Batch  20/ 21 | Time/Batch(ms) 571.87 | Train Loss 1.0794
+--------------------------------------------------
+Epoch 27 | Time 18.1227 sec | Valid Loss 1.4246 | Test Loss 1.4101
+--------------------------------------------------
+Epoch 28 | Batch  10/ 21 | Time/Batch(ms) 674.46 | Train Loss 1.0367
+Epoch 28 | Batch  20/ 21 | Time/Batch(ms) 537.30 | Train Loss 1.0702
+--------------------------------------------------
+Epoch 28 | Time 17.5560 sec | Valid Loss 1.4124 | Test Loss 1.3803
+--------------------------------------------------
+Epoch 29 | Batch  10/ 21 | Time/Batch(ms) 653.98 | Train Loss 1.0478
+Epoch 29 | Batch  20/ 21 | Time/Batch(ms) 555.22 | Train Loss 1.0879
+--------------------------------------------------
+Epoch 29 | Time 17.7976 sec | Valid Loss 1.4644 | Test Loss 1.4002
+--------------------------------------------------
+Epoch 30 | Batch  10/ 21 | Time/Batch(ms) 665.59 | Train Loss 1.0926
+Epoch 30 | Batch  20/ 21 | Time/Batch(ms) 545.91 | Train Loss 1.0395
+--------------------------------------------------
+Epoch 30 | Time 17.6733 sec | Valid Loss 1.5008 | Test Loss 1.4040
+--------------------------------------------------
+MAE:  1.4185193
+Correlation Coefficient:  0.09830555759768085
+mult_acc_7:  0.15597667638483964
+mult_acc_5:  0.15597667638483964
+F1 score:  0.5128505352055455
+Accuracy:  0.5167682926829268

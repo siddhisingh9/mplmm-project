@@ -1,5 +1,5 @@
 import torch
-from src.mosidata import MOSIData
+from src.mosidata import MOSIData, MOSISpatialData
 from src.iemodata import IEMOData
 from src.simsdata import SIMSData
 from torch.utils.data import DataLoader
@@ -44,6 +44,14 @@ def get_data(args, split="train", full_data=False):
                 full_data=full_data,
                 audio_len=getattr(args, "iemo_audio_len", 350),
             )
+    elif getattr(args, "spatial_feats", None):
+        data = MOSISpatialData(
+            args.data_path,
+            args.spatial_feats,
+            split,
+            drop_rate=args.drop_rate,
+            full_data=full_data,
+        )
     elif args.dataset == "mosi" or args.dataset == "mosei":
         data = MOSIData(
             args.data_path, split, drop_rate=args.drop_rate, full_data=full_data

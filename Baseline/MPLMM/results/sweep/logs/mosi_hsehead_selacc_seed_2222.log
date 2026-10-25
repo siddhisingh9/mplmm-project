@@ -1,0 +1,172 @@
+C:\Users\siddhi\AppData\Local\Programs\Python\Python310\lib\site-packages\torch\utils\_device.py:116: UserWarning: The number of elements in the out tensor of shape [50] is 50 which does not match the computed number of elements 66. Note that this may occur as a result of rounding error. The out tensor will be resized to a tensor of shape (66,). (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\aten\src\ATen\native\cuda\RangeFactories.cu:261.)
+  return func(*args, **kwargs)
+Missing key(s) in state_dict :proj_l.weight
+Missing key(s) in state_dict :proj_a.weight
+Missing key(s) in state_dict :proj_v.weight
+Missing key(s) in state_dict :out_layer.weight
+Missing key(s) in state_dict :out_layer.bias
+Epoch  1 | Batch  10/ 21 | Time/Batch(ms) 604.39 | Train Loss 1.3099
+Epoch  1 | Batch  20/ 21 | Time/Batch(ms) 386.02 | Train Loss 1.3616
+--------------------------------------------------
+Epoch  1 | Time 18.9902 sec | Valid Loss 1.4289 | Test Loss 1.4346 | Avg Valid ACC 59.83 | Avg Valid F1 44.79
+--------------------------------------------------
+Saved model at results/sweep/mosi_hsehead_selacc_seed_2222.pt
+Epoch  2 | Batch  10/ 21 | Time/Batch(ms) 453.65 | Train Loss 1.3245
+Epoch  2 | Batch  20/ 21 | Time/Batch(ms) 376.93 | Train Loss 1.3094
+--------------------------------------------------
+Epoch  2 | Time 17.3493 sec | Valid Loss 1.4204 | Test Loss 1.4619 | Avg Valid ACC 59.83 | Avg Valid F1 44.79
+--------------------------------------------------
+Saved model at results/sweep/mosi_hsehead_selacc_seed_2222.pt
+Epoch  3 | Batch  10/ 21 | Time/Batch(ms) 453.43 | Train Loss 1.3130
+Epoch  3 | Batch  20/ 21 | Time/Batch(ms) 375.28 | Train Loss 1.3125
+--------------------------------------------------
+Epoch  3 | Time 17.5327 sec | Valid Loss 1.4254 | Test Loss 1.4355 | Avg Valid ACC 58.30 | Avg Valid F1 48.60
+--------------------------------------------------
+Epoch  4 | Batch  10/ 21 | Time/Batch(ms) 447.58 | Train Loss 1.2905
+Epoch  4 | Batch  20/ 21 | Time/Batch(ms) 380.80 | Train Loss 1.3185
+--------------------------------------------------
+Epoch  4 | Time 17.4581 sec | Valid Loss 1.4428 | Test Loss 1.4827 | Avg Valid ACC 58.95 | Avg Valid F1 47.18
+--------------------------------------------------
+Epoch  5 | Batch  10/ 21 | Time/Batch(ms) 457.98 | Train Loss 1.3331
+Epoch  5 | Batch  20/ 21 | Time/Batch(ms) 401.50 | Train Loss 1.2413
+--------------------------------------------------
+Epoch  5 | Time 17.6663 sec | Valid Loss 1.4300 | Test Loss 1.4968 | Avg Valid ACC 59.10 | Avg Valid F1 48.71
+--------------------------------------------------
+Epoch  6 | Batch  10/ 21 | Time/Batch(ms) 443.17 | Train Loss 1.2841
+Epoch  6 | Batch  20/ 21 | Time/Batch(ms) 375.08 | Train Loss 1.2806
+--------------------------------------------------
+Epoch  6 | Time 17.5033 sec | Valid Loss 1.3997 | Test Loss 1.4433 | Avg Valid ACC 58.59 | Avg Valid F1 48.81
+--------------------------------------------------
+Epoch  7 | Batch  10/ 21 | Time/Batch(ms) 460.21 | Train Loss 1.2606
+Epoch  7 | Batch  20/ 21 | Time/Batch(ms) 376.45 | Train Loss 1.2165
+--------------------------------------------------
+Epoch  7 | Time 17.6458 sec | Valid Loss 1.3684 | Test Loss 1.4483 | Avg Valid ACC 60.12 | Avg Valid F1 47.94
+--------------------------------------------------
+Saved model at results/sweep/mosi_hsehead_selacc_seed_2222.pt
+Epoch  8 | Batch  10/ 21 | Time/Batch(ms) 471.58 | Train Loss 1.2168
+Epoch  8 | Batch  20/ 21 | Time/Batch(ms) 380.72 | Train Loss 1.1853
+--------------------------------------------------
+Epoch  8 | Time 17.8614 sec | Valid Loss 1.4284 | Test Loss 1.4627 | Avg Valid ACC 60.77 | Avg Valid F1 51.55
+--------------------------------------------------
+Saved model at results/sweep/mosi_hsehead_selacc_seed_2222.pt
+Epoch  9 | Batch  10/ 21 | Time/Batch(ms) 486.84 | Train Loss 1.1413
+Epoch  9 | Batch  20/ 21 | Time/Batch(ms) 377.68 | Train Loss 1.1301
+--------------------------------------------------
+Epoch  9 | Time 17.8708 sec | Valid Loss 1.4484 | Test Loss 1.5653 | Avg Valid ACC 59.61 | Avg Valid F1 51.98
+--------------------------------------------------
+Epoch 10 | Batch  10/ 21 | Time/Batch(ms) 462.93 | Train Loss 1.1435
+Epoch 10 | Batch  20/ 21 | Time/Batch(ms) 381.68 | Train Loss 1.1647
+--------------------------------------------------
+Epoch 10 | Time 17.7898 sec | Valid Loss 1.3165 | Test Loss 1.5350 | Avg Valid ACC 62.08 | Avg Valid F1 53.80
+--------------------------------------------------
+Saved model at results/sweep/mosi_hsehead_selacc_seed_2222.pt
+Epoch 11 | Batch  10/ 21 | Time/Batch(ms) 484.33 | Train Loss 1.1593
+Epoch 11 | Batch  20/ 21 | Time/Batch(ms) 392.30 | Train Loss 1.1025
+--------------------------------------------------
+Epoch 11 | Time 17.8386 sec | Valid Loss 1.3113 | Test Loss 1.4428 | Avg Valid ACC 61.28 | Avg Valid F1 55.59
+--------------------------------------------------
+Epoch 12 | Batch  10/ 21 | Time/Batch(ms) 452.42 | Train Loss 1.0774
+Epoch 12 | Batch  20/ 21 | Time/Batch(ms) 382.15 | Train Loss 1.0424
+--------------------------------------------------
+Epoch 12 | Time 17.5985 sec | Valid Loss 1.3899 | Test Loss 1.3777 | Avg Valid ACC 62.30 | Avg Valid F1 58.18
+--------------------------------------------------
+Saved model at results/sweep/mosi_hsehead_selacc_seed_2222.pt
+Epoch 13 | Batch  10/ 21 | Time/Batch(ms) 451.34 | Train Loss 1.0079
+Epoch 13 | Batch  20/ 21 | Time/Batch(ms) 371.31 | Train Loss 1.0421
+--------------------------------------------------
+Epoch 13 | Time 17.3436 sec | Valid Loss 1.3256 | Test Loss 1.3215 | Avg Valid ACC 64.70 | Avg Valid F1 60.94
+--------------------------------------------------
+Saved model at results/sweep/mosi_hsehead_selacc_seed_2222.pt
+Epoch 14 | Batch  10/ 21 | Time/Batch(ms) 450.39 | Train Loss 1.0067
+Epoch 14 | Batch  20/ 21 | Time/Batch(ms) 382.21 | Train Loss 1.0623
+--------------------------------------------------
+Epoch 14 | Time 17.6319 sec | Valid Loss 1.2766 | Test Loss 1.3154 | Avg Valid ACC 62.52 | Avg Valid F1 60.41
+--------------------------------------------------
+Epoch 15 | Batch  10/ 21 | Time/Batch(ms) 447.87 | Train Loss 1.0216
+Epoch 15 | Batch  20/ 21 | Time/Batch(ms) 372.53 | Train Loss 1.0457
+--------------------------------------------------
+Epoch 15 | Time 17.4053 sec | Valid Loss 1.3032 | Test Loss 1.3667 | Avg Valid ACC 62.66 | Avg Valid F1 61.04
+--------------------------------------------------
+Epoch 16 | Batch  10/ 21 | Time/Batch(ms) 447.15 | Train Loss 1.0059
+Epoch 16 | Batch  20/ 21 | Time/Batch(ms) 387.83 | Train Loss 1.0269
+--------------------------------------------------
+Epoch 16 | Time 17.5983 sec | Valid Loss 1.3997 | Test Loss 1.4313 | Avg Valid ACC 62.37 | Avg Valid F1 60.60
+--------------------------------------------------
+Epoch 17 | Batch  10/ 21 | Time/Batch(ms) 464.07 | Train Loss 0.9976
+Epoch 17 | Batch  20/ 21 | Time/Batch(ms) 388.39 | Train Loss 1.0319
+--------------------------------------------------
+Epoch 17 | Time 17.6124 sec | Valid Loss 1.2537 | Test Loss 1.3240 | Avg Valid ACC 61.28 | Avg Valid F1 59.76
+--------------------------------------------------
+Epoch 18 | Batch  10/ 21 | Time/Batch(ms) 435.86 | Train Loss 1.0219
+Epoch 18 | Batch  20/ 21 | Time/Batch(ms) 391.18 | Train Loss 1.0592
+--------------------------------------------------
+Epoch 18 | Time 17.4186 sec | Valid Loss 1.2742 | Test Loss 1.3697 | Avg Valid ACC 63.61 | Avg Valid F1 60.68
+--------------------------------------------------
+Epoch 19 | Batch  10/ 21 | Time/Batch(ms) 450.82 | Train Loss 0.9932
+Epoch 19 | Batch  20/ 21 | Time/Batch(ms) 367.80 | Train Loss 1.0048
+--------------------------------------------------
+Epoch 19 | Time 17.3347 sec | Valid Loss 1.2241 | Test Loss 1.2973 | Avg Valid ACC 60.48 | Avg Valid F1 59.25
+--------------------------------------------------
+Epoch 20 | Batch  10/ 21 | Time/Batch(ms) 451.31 | Train Loss 0.9738
+Epoch 20 | Batch  20/ 21 | Time/Batch(ms) 394.91 | Train Loss 0.9968
+--------------------------------------------------
+Epoch 20 | Time 17.7276 sec | Valid Loss 1.2771 | Test Loss 1.3240 | Avg Valid ACC 64.48 | Avg Valid F1 63.95
+--------------------------------------------------
+Epoch 21 | Batch  10/ 21 | Time/Batch(ms) 450.01 | Train Loss 0.9519
+Epoch 21 | Batch  20/ 21 | Time/Batch(ms) 378.64 | Train Loss 1.0080
+--------------------------------------------------
+Epoch 21 | Time 17.3099 sec | Valid Loss 1.2261 | Test Loss 1.2749 | Avg Valid ACC 62.23 | Avg Valid F1 61.58
+--------------------------------------------------
+Epoch 22 | Batch  10/ 21 | Time/Batch(ms) 453.28 | Train Loss 0.9861
+Epoch 22 | Batch  20/ 21 | Time/Batch(ms) 380.55 | Train Loss 0.9325
+--------------------------------------------------
+Epoch 22 | Time 17.6725 sec | Valid Loss 1.2242 | Test Loss 1.2221 | Avg Valid ACC 62.23 | Avg Valid F1 61.33
+--------------------------------------------------
+Epoch 23 | Batch  10/ 21 | Time/Batch(ms) 447.43 | Train Loss 0.9637
+Epoch 23 | Batch  20/ 21 | Time/Batch(ms) 387.75 | Train Loss 0.9661
+--------------------------------------------------
+Epoch 23 | Time 17.4327 sec | Valid Loss 1.2363 | Test Loss 1.3061 | Avg Valid ACC 64.92 | Avg Valid F1 63.00
+--------------------------------------------------
+Saved model at results/sweep/mosi_hsehead_selacc_seed_2222.pt
+Epoch 24 | Batch  10/ 21 | Time/Batch(ms) 460.91 | Train Loss 0.9372
+Epoch 24 | Batch  20/ 21 | Time/Batch(ms) 388.05 | Train Loss 0.9214
+--------------------------------------------------
+Epoch 24 | Time 17.8018 sec | Valid Loss 1.2291 | Test Loss 1.3139 | Avg Valid ACC 63.83 | Avg Valid F1 61.20
+--------------------------------------------------
+Epoch 25 | Batch  10/ 21 | Time/Batch(ms) 462.48 | Train Loss 0.9569
+Epoch 25 | Batch  20/ 21 | Time/Batch(ms) 384.88 | Train Loss 0.9283
+--------------------------------------------------
+Epoch 25 | Time 17.8866 sec | Valid Loss 1.2277 | Test Loss 1.3287 | Avg Valid ACC 65.36 | Avg Valid F1 63.17
+--------------------------------------------------
+Saved model at results/sweep/mosi_hsehead_selacc_seed_2222.pt
+Epoch 26 | Batch  10/ 21 | Time/Batch(ms) 461.82 | Train Loss 0.8879
+Epoch 26 | Batch  20/ 21 | Time/Batch(ms) 377.81 | Train Loss 0.9405
+--------------------------------------------------
+Epoch 26 | Time 17.7715 sec | Valid Loss 1.1995 | Test Loss 1.2893 | Avg Valid ACC 64.05 | Avg Valid F1 62.38
+--------------------------------------------------
+Epoch 27 | Batch  10/ 21 | Time/Batch(ms) 438.30 | Train Loss 0.9407
+Epoch 27 | Batch  20/ 21 | Time/Batch(ms) 384.13 | Train Loss 0.9395
+--------------------------------------------------
+Epoch 27 | Time 17.3358 sec | Valid Loss 1.2157 | Test Loss 1.2809 | Avg Valid ACC 65.07 | Avg Valid F1 65.17
+--------------------------------------------------
+Epoch 28 | Batch  10/ 21 | Time/Batch(ms) 440.99 | Train Loss 0.9010
+Epoch 28 | Batch  20/ 21 | Time/Batch(ms) 384.30 | Train Loss 0.9544
+--------------------------------------------------
+Epoch 28 | Time 17.4586 sec | Valid Loss 1.2460 | Test Loss 1.2199 | Avg Valid ACC 62.45 | Avg Valid F1 62.77
+--------------------------------------------------
+Epoch 29 | Batch  10/ 21 | Time/Batch(ms) 437.11 | Train Loss 0.8776
+Epoch 29 | Batch  20/ 21 | Time/Batch(ms) 380.65 | Train Loss 0.9755
+--------------------------------------------------
+Epoch 29 | Time 17.3511 sec | Valid Loss 1.2799 | Test Loss 1.3007 | Avg Valid ACC 63.61 | Avg Valid F1 63.01
+--------------------------------------------------
+Epoch 30 | Batch  10/ 21 | Time/Batch(ms) 455.29 | Train Loss 0.8810
+Epoch 30 | Batch  20/ 21 | Time/Batch(ms) 374.23 | Train Loss 0.9462
+--------------------------------------------------
+Epoch 30 | Time 17.3888 sec | Valid Loss 1.2096 | Test Loss 1.2418 | Avg Valid ACC 63.17 | Avg Valid F1 62.79
+--------------------------------------------------
+MAE:  1.3060237
+Correlation Coefficient:  0.40112325540705457
+mult_acc_7:  0.24052478134110788
+mult_acc_5:  0.2565597667638484
+F1 score:  0.6861888433307118
+Accuracy:  0.6844512195121951

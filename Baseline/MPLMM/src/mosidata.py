@@ -1,3 +1,4 @@
+import os
 import random
 import numpy as np
 from torch.utils.data.dataset import Dataset
@@ -61,5 +62,26 @@ class MOSIData(Dataset):
 
     def __getitem__(self, index):
         X = (self.text[index], self.audio[index], self.vision[index])
+        Y = self.labels[index]
+        return X, Y, self.get_missing_mode()
+
+
+class MOSISpatialData(MOSIData):
+    """MOSIData with vision replaced by per-frame spatial feature maps (T, C, H, W)."""
+
+    def __init__(
+        self, dataset_path, spatial_dir, split_type="train", drop_rate=0.6, full_data=False
+    ):
+        super(MOSISpatialData, self).__init__(
+            dataset_path, split_type, drop_rate=drop_rate, full_data=full_data
+        )
+        # Kept as float16 to halve memory; cast per sample.
+        self.vision = torch.from_numpy(np.load(os.path.join(spatial_dir, f"{split_type}.npy")))
+        assert len(self.vision) == len(self.labels), (
+            f"{split_type}: {len(self.vision)} spatial samples vs {len(self.labels)} labels"
+        )
+
+    def __getitem__(self, index):
+        X = (self.text[index], self.audio[index], self.vision[index].float())
         Y = self.labels[index]
         return X, Y, self.get_missing_mode()

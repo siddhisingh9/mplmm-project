@@ -1,0 +1,114 @@
+C:\Users\siddhi\AppData\Local\Programs\Python\Python310\lib\site-packages\torch\utils\_device.py:116: UserWarning: The number of elements in the out tensor of shape [50] is 50 which does not match the computed number of elements 66. Note that this may occur as a result of rounding error. The out tensor will be resized to a tensor of shape (66,). (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\aten\src\ATen\native\cuda\RangeFactories.cu:261.)
+  return func(*args, **kwargs)
+Missing key(s) in state_dict :proj_l.weight
+Missing key(s) in state_dict :proj_a.weight
+Missing key(s) in state_dict :proj_v.weight
+Missing key(s) in state_dict :out_layer.weight
+Missing key(s) in state_dict :out_layer.bias
+--------------------------------------------------
+Epoch  1 | Time 9.7705 sec | Valid Loss 1.4219 | Test Loss 1.4486
+--------------------------------------------------
+Saved model at results/mosi_spatialpool_seed_2222.pt
+--------------------------------------------------
+Epoch  2 | Time 9.2270 sec | Valid Loss 1.4205 | Test Loss 1.4587
+--------------------------------------------------
+Saved model at results/mosi_spatialpool_seed_2222.pt
+--------------------------------------------------
+Epoch  3 | Time 9.4206 sec | Valid Loss 1.4307 | Test Loss 1.4153
+--------------------------------------------------
+--------------------------------------------------
+Epoch  4 | Time 9.0883 sec | Valid Loss 1.4250 | Test Loss 1.4021
+--------------------------------------------------
+--------------------------------------------------
+Epoch  5 | Time 8.6901 sec | Valid Loss 1.4062 | Test Loss 1.4538
+--------------------------------------------------
+Saved model at results/mosi_spatialpool_seed_2222.pt
+--------------------------------------------------
+Epoch  6 | Time 9.0099 sec | Valid Loss 1.3821 | Test Loss 1.4343
+--------------------------------------------------
+Saved model at results/mosi_spatialpool_seed_2222.pt
+--------------------------------------------------
+Epoch  7 | Time 9.1196 sec | Valid Loss 1.4101 | Test Loss 1.3990
+--------------------------------------------------
+--------------------------------------------------
+Epoch  8 | Time 9.0043 sec | Valid Loss 1.3305 | Test Loss 1.4044
+--------------------------------------------------
+Saved model at results/mosi_spatialpool_seed_2222.pt
+--------------------------------------------------
+Epoch  9 | Time 9.3469 sec | Valid Loss 1.3246 | Test Loss 1.3502
+--------------------------------------------------
+Saved model at results/mosi_spatialpool_seed_2222.pt
+--------------------------------------------------
+Epoch 10 | Time 8.9716 sec | Valid Loss 1.2698 | Test Loss 1.3361
+--------------------------------------------------
+Saved model at results/mosi_spatialpool_seed_2222.pt
+--------------------------------------------------
+Epoch 11 | Time 9.2061 sec | Valid Loss 1.3025 | Test Loss 1.3708
+--------------------------------------------------
+--------------------------------------------------
+Epoch 12 | Time 8.8798 sec | Valid Loss 1.3545 | Test Loss 1.2874
+--------------------------------------------------
+--------------------------------------------------
+Epoch 13 | Time 8.9972 sec | Valid Loss 1.3503 | Test Loss 1.3845
+--------------------------------------------------
+--------------------------------------------------
+Epoch 14 | Time 8.8073 sec | Valid Loss 1.2572 | Test Loss 1.2973
+--------------------------------------------------
+Saved model at results/mosi_spatialpool_seed_2222.pt
+--------------------------------------------------
+Epoch 15 | Time 9.1895 sec | Valid Loss 1.2659 | Test Loss 1.3193
+--------------------------------------------------
+--------------------------------------------------
+Epoch 16 | Time 9.1296 sec | Valid Loss 1.2477 | Test Loss 1.3299
+--------------------------------------------------
+Saved model at results/mosi_spatialpool_seed_2222.pt
+--------------------------------------------------
+Epoch 17 | Time 9.0283 sec | Valid Loss 1.2157 | Test Loss 1.2830
+--------------------------------------------------
+Saved model at results/mosi_spatialpool_seed_2222.pt
+--------------------------------------------------
+Epoch 18 | Time 9.0896 sec | Valid Loss 1.2511 | Test Loss 1.2383
+--------------------------------------------------
+--------------------------------------------------
+Epoch 19 | Time 9.1075 sec | Valid Loss 1.2401 | Test Loss 1.2653
+--------------------------------------------------
+--------------------------------------------------
+Epoch 20 | Time 9.2788 sec | Valid Loss 1.3197 | Test Loss 1.2757
+--------------------------------------------------
+--------------------------------------------------
+Epoch 21 | Time 9.4949 sec | Valid Loss 1.2254 | Test Loss 1.2496
+--------------------------------------------------
+--------------------------------------------------
+Epoch 22 | Time 9.0906 sec | Valid Loss 1.3526 | Test Loss 1.2581
+--------------------------------------------------
+--------------------------------------------------
+Epoch 23 | Time 9.7802 sec | Valid Loss 1.2450 | Test Loss 1.3095
+--------------------------------------------------
+--------------------------------------------------
+Epoch 24 | Time 8.8281 sec | Valid Loss 1.2491 | Test Loss 1.2217
+--------------------------------------------------
+--------------------------------------------------
+Epoch 25 | Time 9.5899 sec | Valid Loss 1.2359 | Test Loss 1.2604
+--------------------------------------------------
+--------------------------------------------------
+Epoch 26 | Time 8.9342 sec | Valid Loss 1.2152 | Test Loss 1.3189
+--------------------------------------------------
+Saved model at results/mosi_spatialpool_seed_2222.pt
+--------------------------------------------------
+Epoch 27 | Time 8.9938 sec | Valid Loss 1.2277 | Test Loss 1.3523
+--------------------------------------------------
+--------------------------------------------------
+Epoch 28 | Time 9.0163 sec | Valid Loss 1.3154 | Test Loss 1.2512
+--------------------------------------------------
+--------------------------------------------------
+Epoch 29 | Time 8.9721 sec | Valid Loss 1.2402 | Test Loss 1.2446
+--------------------------------------------------
+--------------------------------------------------
+Epoch 30 | Time 8.8531 sec | Valid Loss 1.2600 | Test Loss 1.2783
+--------------------------------------------------
+MAE:  1.3184967
+Correlation Coefficient:  0.32534090872446925
+mult_acc_7:  0.20845481049562684
+mult_acc_5:  0.21865889212827988
+F1 score:  0.6468217502126865
+Accuracy:  0.6448170731707317
