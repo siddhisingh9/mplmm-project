@@ -38,3 +38,11 @@ MPLMM/results/
 # Preserve the project source tree when the original nested repository metadata
 # is kept as a local backup.
 MPLMM/.git.upstream-backup/
+
+# RAG extension: generated memory banks, checkpoints and run logs
+RAGPrompt/banks/
+RAGPrompt/checkpoints/
+RAGPrompt/results/logs/
+
+# MoE extension: checkpoints
+MoEPrompt/checkpoints/
