@@ -2,7 +2,9 @@
 
 > Course project — Machine Learning, Semester 5, **Indian Institute of Technology Bhilai**
 
-We extend **MPLMM** (*Multimodal Prompt Learning with Missing Modalities*, Guo et al., ACL 2024) so that sentiment analysis stays robust when text, audio or video is missing.
+We extend **MPLMM** (*Multimodal Prompt Learning with Missing Modalities*, Guo et al., ACL 2024) so that sentiment analysis and emotion recognition stay robust when text, audio or video is missing.
+
+**Quick navigation:** [Problem](#problem-statement) · [Datasets](#datasets) · [Progress](#progress) · [Repository](#repository-structure) · [Where to find what](#where-to-find-what) · [Team](#team) · [References](#references)
 
 ---
 
@@ -38,17 +40,17 @@ The model must stay accurate across all missing-modality patterns and missing ra
 
 ---
 
-## Where We Are
+## Progress
 
-**All four datasets are pre-processed and explored, and the MPLMM baseline is reproduced. Next, we add the three proposed techniques.**
+| | Stage | Status |
+|:-:|---|---|
+| ✅ | Pre-processing and EDA on all 4 datasets | Done |
+| ✅ | MPLMM baseline reproduction (pre-training and fine-tuning) | Done |
+| ✅ | **Technique A:** 2D spatial feature convolution | Partial: 2D-CNN (ResNet-18) features extracted from raw frames; tested on sentiment analysis with all modalities present; not used in the missing-modality pipeline |
+| ✅ | **Technique B:** Retrieval-augmented generation (RAGPrompt) | Implemented and evaluated on all 4 datasets |
+| ✅ | **Technique C:** Mixture-of-Experts generator (MoEPrompt) | Implemented and evaluated on all 4 datasets |
 
-| Step | Task | Status |
-|---|---|---|
-| 1 | Pre-processing and EDA: CMU-MOSI, CMU-MOSEI, CH-SIMS, IEMOCAP | ✅ Done |
-| 2 | MPLMM baseline reproduction (pre-training and fine-tuning) | ✅ Done |
-| 3 | Technique A: 2D spatial feature convolution | 🔲 Next |
-| 4 | Technique B: Retrieval-augmented reconstruction (RAG, with Residual RAG as an extension) | 🔲 Next |
-| 5 | Technique C: Mixture-of-Experts missing-modality generator (MoE-MMGM) | 🔲 Next |
+| ⬜ | **Residual RAG** (exploratory extension of B) | Not started |
 
 ---
 
@@ -56,16 +58,31 @@ The model must stay accurate across all missing-modality patterns and missing ra
 
 ```text
 .
-├── preprocessing/   # Feature extraction + EDA for CH-SIMS, CMU-MOSI, CMU-MOSEI
-├── notebooks/       # IEMOCAP EDA + per-dataset quick classifiers
-├── Baseline/        # MPLMM baseline reproduction (code, notebook, results)
-├── configs/         # Experiment configuration
-└── proposal.pdf     # Full research plan
+├── preprocessing/       # Feature extraction + EDA for CH-SIMS, CMU-MOSI, CMU-MOSEI
+├── notebooks/           # IEMOCAP EDA + per-dataset quick classifiers
+├── Baseline/            # MPLMM baseline reproduction (code, notebook, results)
+├── ProposedMethod/
+│   ├── MPLMM/           # Read-only copy of the baseline code, imported by both extensions
+│   ├── RAGPrompt/       # Technique B: retrieval-augmented generative prompts
+│   ├── MoEPrompt/       # Technique C: mixture-of-experts missing-modality generator
+│   └── finalResults.ipynb  # Final comparison tables (Paper vs Baseline vs RAG vs MoE)
+├── LICENSE
+└── proposal.pdf         # Full research plan
 ```
 
-- **Pre-processing:** see [preprocessing/README.md](preprocessing/README.md).
-- **Notebooks:** see [notebooks/README.md](notebooks/README.md).
-- **Baseline:** see [Baseline/README.md](Baseline/README.md) for setup, pre-training and fine-tuning commands. Results are in [Baseline/MPLMM/results/](Baseline/MPLMM/results/).
+---
+
+## Where to Find What
+
+| I want to… | Go to |
+|---|---|
+| See the final comparison tables | [ProposedMethod/finalResults.ipynb](ProposedMethod/finalResults.ipynb) |
+| Understand the baseline and reproduce it | [Baseline/README.md](Baseline/README.md) |
+| Understand RAG and run it | [ProposedMethod/RAGPrompt/README.md](ProposedMethod/RAGPrompt/README.md) |
+| Understand MoE and run it | [ProposedMethod/MoEPrompt/README.md](ProposedMethod/MoEPrompt/README.md) |
+| See the baseline result table | [Baseline/MPLMM/results/mplmm_baseline_results.csv](Baseline/MPLMM/results/mplmm_baseline_results.csv) |
+| See the dataset pre-processing | [preprocessing/README.md](preprocessing/README.md) |
+| See the IEMOCAP and classifier notebooks | [notebooks/README.md](notebooks/README.md) |
 
 ---
 
