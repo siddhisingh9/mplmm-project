@@ -17,7 +17,7 @@ RESULTS_DIR = RAG_ROOT / "results"
 RUNS_CSV = RESULTS_DIR / "runs.csv"
 
 # positive: how a regression score is turned into a binary label. These match
-# the conventions of the final baseline table (results/table_main_sims_fixed.csv).
+# the conventions of the final baseline table (results/mplmm_baseline_results.csv).
 DATASETS = {
     "mosi": {
         "data_path": MPLMM_DIR / "dataset" / "mosi_data.pkl",

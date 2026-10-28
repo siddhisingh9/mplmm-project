@@ -16,7 +16,7 @@ RESULTS_DIR = MOE_ROOT / "results"
 RUNS_CSV = RESULTS_DIR / "runs.csv"
 
 # positive: how a regression score is turned into a binary label. These match
-# the conventions of the final baseline table (MPLMM/results/table_main_sims_fixed.csv).
+# the conventions of the final baseline table (MPLMM/results/mplmm_baseline_results.csv).
 # legacy_ckpt: the baseline checkpoint behind that table (used by scripts/diagnose.py).
 DATASETS = {
     "mosi": {
